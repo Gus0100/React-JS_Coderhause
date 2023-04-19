@@ -1,14 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
-import { Navbar } from "./Components/NavBar/Navbar";
-import { Button } from 'react-bootstrap';
+import NavBarOffCanvas from './Components/NavBar/NavBarOffCanvas';
 
 function App() {
 
     return (
         <div>
-            <Navbar />
-            <Button>Click me</Button>
+            <NavBarOffCanvas/>
         </div>
     );
 }
