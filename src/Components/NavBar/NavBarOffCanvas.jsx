@@ -1,16 +1,17 @@
 import './Navbar.scss'
-import Button from 'react-bootstrap/Button';
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import CartWidget from '../CartWidget/CartWidget';
 
 function NavBarOffCanvas() {
     return (
         <>
-            {['md'].map((expand) => (
+            {['lg'].map((expand) => (
                 <Navbar key={expand} bg="light" expand={expand} className="mb-3">
-                    <Container fluid>
+                    <Container>
                         <img src={'./public/LogoPatin.png'} alt="LOGO" className='logo'/>
                         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
                         <Navbar.Offcanvas
@@ -29,6 +30,7 @@ function NavBarOffCanvas() {
                                     <Nav.Link href="#action2">Nuestros Servicios</Nav.Link>
                                     <Nav.Link href="#action2">Opiniones de nuestros clientes</Nav.Link>
                                     <Nav.Link href="#action2">Contactanos</Nav.Link>
+                                    <CartWidget/>
                                 </Nav>
                             </Offcanvas.Body>
                         </Navbar.Offcanvas>
