@@ -1,11 +1,11 @@
+import './ItemCount.scss'
 import { useState } from "react"
 import Button from 'react-bootstrap/Button';
-import './ItemCount.scss'
 
 
 const ItemCount = ({stock, initial, onAdd}) => {
     const [quantity, setQuantity] = useState(initial)
-
+    
     const increment = () => {
         if (quantity < stock) {
             setQuantity(quantity + 1)
