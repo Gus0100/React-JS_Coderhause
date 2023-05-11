@@ -3,14 +3,24 @@ import "./App.css";
 import React from 'react';
 import NavBarOffCanvas from './Components/NavBar/NavBarOffCanvas';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Nosotros from './Components/Nosotros/Nosotros';
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
 
     return (
-        <div>
+        <BrowserRouter>
             <NavBarOffCanvas/>
-            <ItemListContainer/>
-        </div>
+            <Routes>
+                <Route path='/' element={ <ItemListContainer/> } />
+                <Route path='/productos/:categoryId' element={ <ItemListContainer/> } />
+                <Route path='/nosotros' element={ <Nosotros/> } />
+                <Route path='/item/:itemId' element={ <ItemDetailContainer/>}/>
+                <Route path='*' element={<h1>404 NOT FOUND</h1>} />
+            </Routes>
+        </BrowserRouter>
+
     );
 }
 

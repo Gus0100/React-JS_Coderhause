@@ -1,11 +1,4 @@
-.containercards{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 10%;
-}
-
-.card {
+.cardItem {
     box-sizing: border-box;
     width: 250px;
     height: 400px;
@@ -27,12 +20,12 @@
     transform: scale(1.05);
 }
 
-.patin{
+.ItemImg {
     width: 100%;
     border-radius: 17px;
 }
 
-.text-title {
+.ItemHeader {
     font-size: 1.5rem;
     font-weight: 500;
 }

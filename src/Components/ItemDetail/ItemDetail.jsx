@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
-import ItemCount from '../ItemCount/ItemCount'
-import "./Item.scss"
+import ItemCount from "../ItemCount/ItemCount"
+import "./ItemDetail.scss"
 
 
-const Item = ({id, name, img, price, stock}) => {
+const ItemDetail = ({id, name, img, price, stock}) => {
     
     return (
-        <article className="cardItem">
+        <article className="CardItem">
             <header className="Header">
                 <h2 className="ItemHeader">
                     {name}
@@ -17,7 +17,7 @@ const Item = ({id, name, img, price, stock}) => {
             </picture>
             <section>
                 <p>
-                <Link to={''}>Ver detalle</Link>
+                <Link to={'/item/${id}'}>Ver detalle</Link>
                 </p>
                 <p className="Info">
                     Precio: {price}
@@ -33,4 +33,4 @@ const Item = ({id, name, img, price, stock}) => {
     )
 }
 
-export default Item
+export default ItemDetail
