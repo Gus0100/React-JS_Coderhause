@@ -1,7 +1,7 @@
 .cardItem {
     box-sizing: border-box;
     width: 250px;
-    height: 400px;
+    height: 470px;
     background: rgba(217, 217, 217, 0.58);
     border: 1px solid white;
     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
@@ -9,7 +9,6 @@
     border-radius: 17px;
     text-align: center;
     transition: all 0.5s;
-    display: flex;
     user-select: none;
     font-weight: bolder;
     color: black;

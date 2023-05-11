@@ -1,5 +1,11 @@
 .containercards{
-    display: flex;
-    align-items: center;
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 120px;
+
     padding-top: 10%;
 }
